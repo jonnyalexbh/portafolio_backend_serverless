@@ -1,12 +1,21 @@
 service: serverless-portfolios
+useDotenv: true
 
 frameworkVersion: '2'
 
+plugins:
+  - serverless-offline
+   
 provider:
   name: aws
   runtime: nodejs14.x
   lambdaHashingVersion: 20201221
 
 functions:
-  hello:
-    handler: handler.hello
+  getPortfolio:
+    handler: handler.getPortfolio
+    events:
+      - http:
+          path: portfolios
+          method: get
+          cors: true

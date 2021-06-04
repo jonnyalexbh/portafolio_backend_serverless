@@ -1,0 +1,27 @@
+{
+  "name": "portafolio_backend_serverless",
+  "version": "1.0.0",
+  "description": "**Create project**",
+  "main": "handler.js",
+  "dependencies": {
+    "pino": "^6.11.3",
+    "pino-pretty": "^5.0.2"
+  },
+  "devDependencies": {
+    "serverless-offline": "^7.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonnyalexbh/portafolio_backend_serverless.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonnyalexbh/portafolio_backend_serverless/issues"
+  },
+  "homepage": "https://github.com/jonnyalexbh/portafolio_backend_serverless#readme"
+}

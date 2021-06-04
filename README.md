@@ -1,8 +1,7 @@
 # Serverless Portfolio
 
-**Create project**
+**Serverless offline**
 
 ```sh
-$ sls invoke local -f hello
-$ sls invoke local -f hello -d '{"name": "jonnyalexbh"}'
+$ sls offline
 ```

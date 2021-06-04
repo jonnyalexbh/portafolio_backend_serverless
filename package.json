@@ -4,6 +4,7 @@
   "description": "**Create project**",
   "main": "handler.js",
   "dependencies": {
+    "aws-sdk": "^2.921.0",
     "pino": "^6.11.3",
     "pino-pretty": "^5.0.2"
   },

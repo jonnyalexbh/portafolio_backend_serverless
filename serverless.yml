@@ -17,6 +17,6 @@ functions:
     name: getPortfolio
     events:
       - http:
-          path: portfolios
+          path: portfolios/{id}
           method: get
           cors: true

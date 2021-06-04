@@ -21,7 +21,6 @@ $ npm start
 ### Project Structure
 ```sh
 .
-├── evidences/                # evidences
 ├── src/
 │   └── config                # all configuration file here
 │   └── logger                # contains pino logger

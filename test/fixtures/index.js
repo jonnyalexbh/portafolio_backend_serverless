@@ -7,3 +7,9 @@ exports.fixturesPortfolio = {
     title: 'Jonny Alexander',
   },
 }
+
+const fixturesPortfolioUpdate = {
+  Attributes: {
+    ...exports.fixturesPortfolio.Item
+  },
+}

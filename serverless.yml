@@ -20,3 +20,12 @@ functions:
           path: portfolios/{id}
           method: get
           cors: true
+
+  updatePortfolio:
+    handler: handler.updatePortfolio
+    name: updatePortfolio
+    events:
+      - http:
+          path: portfolios/{id}
+          method: put
+          cors: true

@@ -49,8 +49,8 @@ $ npm run test
 ### Node JS Lib dev
 * serverless-offline
 
-## Evidences
-
+## Deploy
+* sls deploy
 ### License
 
 MIT

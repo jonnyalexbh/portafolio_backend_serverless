@@ -9,7 +9,33 @@ plugins:
 provider:
   name: aws
   runtime: nodejs12.x
+  region: us-east-1
+  stage: ${opt:stage, 'dev'}
+  environment:
+    NODE_API_DYNAMO_TABLE: ${env:NODE_API_DYNAMO_TABLE}
+    AWS_ACCESS_KEY_ID_ZE: ${env:AWS_ACCESS_KEY_ID}
+    AWS_SECRET_ACCESS_KEY_ZE: ${env:AWS_SECRET_ACCESS_KEY}
+    TWITTER_CONSUMER_KEY: ${env:TWITTER_CONSUMER_KEY}
+    TWITTER_CONSUMER_SECRET: ${env:TWITTER_CONSUMER_SECRET}
+    TWITTER_ACCESS_TOKEN_KEY: ${env:TWITTER_ACCESS_TOKEN_KEY}
+    TWITTER_ACCESS_TOKEN_SECRET: ${env:TWITTER_ACCESS_TOKEN_SECRET}
   lambdaHashingVersion: 20201221
+
+resources:
+  Resources:
+    portfolios:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: 'portfolios-${self:provider.stage}'
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
 
 functions:
   getPortfolio:

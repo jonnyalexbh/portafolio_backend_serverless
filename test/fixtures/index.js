@@ -6,10 +6,10 @@ exports.fixturesPortfolio = {
     twitter_user_name: 'jonnyalexbh',
     title: 'Jonny Alexander',
   },
-}
+};
 
-const fixturesPortfolioUpdate = {
+exports.fixturesPortfolioUpdate = {
   Attributes: {
-    ...exports.fixturesPortfolio.Item
+    ...exports.fixturesPortfolio.Item,
   },
-}
+};

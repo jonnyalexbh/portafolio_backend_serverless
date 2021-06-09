@@ -4,7 +4,7 @@ const { fixturesPortfolio } = require('./fixtures/index');
 
 jest.mock('../src/services/portfolios');
 
-describe(`GET portfolio`, () => {
+describe('GET portfolio', () => {
   test('should be success', async () => {
     const event = { pathParameters: { id: '1' } };
     service.getPortfolio.mockResolvedValue(Promise.resolve(fixturesPortfolio));

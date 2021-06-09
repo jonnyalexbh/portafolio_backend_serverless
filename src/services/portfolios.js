@@ -36,16 +36,16 @@ exports.updatePortfolio = (body, id) => {
   const params = {
     TableName: tableName,
     Key: { id },
-    UpdateExpression: "set title = :t",
+    UpdateExpression: 'set title = :t',
     ExpressionAttributeValues: {
-      ":t": body.title,
+      ':t': body.title,
     },
-    ReturnValues: 'ALL_NEW'
+    ReturnValues: 'ALL_NEW',
   };
 
   return db.update(params)
     .promise()
-    .then(item => item)
+    .then((item) => item)
     .catch((error) => {
       logger.error(error);
       throw new Error('An error occurred while trying to update the portfolio');

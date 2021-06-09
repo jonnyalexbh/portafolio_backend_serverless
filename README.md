@@ -49,6 +49,13 @@ $ npm run test
 ### Node JS Lib dev
 * serverless-offline
 
+### Install eslint airbnb
+
+```sh
+$ npm install --save-dev eslint
+$ npx eslint --init
+```
+
 ## Deploy
 * sls deploy
 ### License

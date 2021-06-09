@@ -4,7 +4,7 @@ const { fixturesPortfolioUpdate } = require('./fixtures/index');
 
 jest.mock('../src/services/portfolios');
 
-describe(`UPDATE portfolio`, () => {
+describe('UPDATE portfolio', () => {
   test('should be success', async () => {
     const event = { body: '{\n    "title":"Jose"\n}', pathParameters: { id: '1' } };
 
